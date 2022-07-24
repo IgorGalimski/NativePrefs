@@ -7,10 +7,9 @@ namespace NativePrefs
     {
         public static IPrefsProvider GetProvider()
         {
-            if (Application.isEditor)
-            {
-                return new EditorPrefsProvider();
-            }
+#if UNITY_EDITOR
+            return new EditorPrefsProvider();
+#endif
             
             switch (Application.platform)
             {
