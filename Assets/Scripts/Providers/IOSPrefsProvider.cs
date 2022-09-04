@@ -31,7 +31,7 @@ namespace NativePrefs
         private static extern bool GetBoolInternal(string key);
 
         [DllImport("__Internal")]
-        private static extern string SaveStringInternal(string key, string value);
+        private static extern void SaveStringInternal(string key, string value);
         
         [DllImport("__Internal")]
         private static extern string GetStringInternal(string key);
