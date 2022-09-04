@@ -38,9 +38,15 @@ namespace NativePrefs.Sample
         
         private void OnSaveDoubleClick()
         {
-            if (double.TryParse(_saveDoubleText.text, out var value))
+            var valueString = _saveDoubleText.text;
+            
+            if (double.TryParse(valueString, out var value))
             {
                 NativePrefs.SaveDouble(DOUBLE_SAVE_KEY, value);
+            }
+            else
+            {
+                Debug.LogError($"Can't parse double: {valueString}");
             }
         }
     }
