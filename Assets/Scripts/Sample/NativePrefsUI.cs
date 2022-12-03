@@ -75,6 +75,11 @@ namespace NativePrefs.Sample
             
             _loadStringButton.onClick.AddListener(OnLoadStringClick);
             _saveStringButton.onClick.AddListener(OnSaveStringClick);
+
+            _saveDoubleText.text = "1.5";
+            _saveIntText.text = "5";
+            _saveBoolToogle.isOn = true;
+            _saveStringText.text = "test";
         }
 
         public void OnDestroy()

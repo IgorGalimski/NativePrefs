@@ -15,7 +15,7 @@ namespace NativePrefs
             {
                 case RuntimePlatform.Android:
                 {
-                    throw new NotImplementedException();
+                    return new AndroidPrefsProvider();
                 }
 
                 case RuntimePlatform.IPhonePlayer:
